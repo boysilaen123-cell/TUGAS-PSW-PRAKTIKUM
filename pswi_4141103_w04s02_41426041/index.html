@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pendaftaran Kegiatan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Selamat Datang Di situs Saya</h1>
+        <p>Halaman pertama Pengembangan Situs Web I.</p>
+        <p>Selamat Mencoba!</p>
+    </header>
+    <main>
+        <section>
+            <h2>Profil Singkat</h2>
+            <p>Nama saya Boy Fermana Silaen.</p>
+            <p> Saya sedang belajar web.</p>
+
+            <h2>Tujuan Belajar</h2>
+            <ul>
+                <li>Memahami cara kerja web</li>
+                <li>Membuat halaman HTML</li>
+                <li>Menggunakan Git</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Pendaftaran Kegiatan</h2>
+            <p>Kolom bertanda wajib harus diisi.</p>
+
+            <form class="card" action="/ok" method="get">
+                <label for="nama">Nama lengkap (wajib)</label>
+                <input id="nama" name="nama" autocomplete="name" required><br>
+                <label for="email">Email (wajib)</label>
+                <input id="email" name="email" type="email" autocomplete="email" required><br>
+                <label for="telepon">Telepon (wajib)</label>
+                <input id="telepon" name="telepon" type="tel" autocomplete="tel" required>
+                <br>
+                <label for="prodi">Program studi (wajib)</label>
+                <select id="prodi" name="prodi" required>
+                    <option value="">Pilih program studi</option>
+                    <option value="trpl">D4 TRPL</option>
+                    <option value="ti">D3 Teknologi Informasi</option>
+                </select><br>
+                <label for="jumlah">Jumlah tiket (1-5, wajib)</label>
+                <input id="jumlah" name="jumlah" type="number" min="1" max="5" step="1" required>
+                <fieldset>
+                    <legend>Mode kehadiran (wajib)</legend>
+                    <input id="luring" name="mode" type="radio" value="luring" required>
+                    <label for="luring">Luring</label>
+                    <input id="daring" name="mode" type="radio" value="daring">
+                    <label for="daring">Daring</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Minat Topik HTML</legend>
+                    <input id="Minat" name="mode" type="checkbox" value="Minat">
+                    <label for="Minat">Ya saya Minat</label><br>
+                    <input id="Tidak-Minat" name="mode" type="checkbox" value="Tidak-Minat">
+                    <label for="Tidak-Minat">Tidak Saya tidak Minat</label><br>
+                    <input id="Biasa" name="mode" type="checkbox" value="Biasa">
+                    <label for="Biasa">B aja</label><br>
+                </fieldset><br>
+                <label for="kode">Kode peserta (6 angka, wajib)</label>
+                <p id="kode-help">Contoh: 001234. Gunakan tepat enam angka.</p>
+                <input id="kode" name="kode" type="text" inputmode="numeric" pattern="[0-9]{6}"
+                    aria-describedby="kode-help" required>
+                <figure>
+                    <img src="https://semat.del.ac.id/assets/img/fasilitas/opentheater.jpg" alt="Samping Gedung 5"
+                        width="200">
+                    <figcaption>Lokasi kegiatan: Open Teater.</figcaption>
+                </figure>
+                <label for="catatan">Catatan (opsional)</label>
+                <textarea id="catatan" name="catatan" rows="4" maxlength="300"></textarea>
+                <button type="submit" id="greeting-button">Daftar</button>
+                <script src="js/main.js"></script>
+            </form>
+        </section>
+        <section>
+            <h2>Kartu Belajar</h2>
+            <p>Hal-hal yang ada di bagian ini bersifat optional</p>
+            <form class="ayam">
+                <fieldset>
+                    <legend id="aku">Mengapa saya belajar HTML</legend>
+                    <label for="coba">Mencoba hal baru</label>
+                    <input id="coba" name="coba" type="checkbox"><br>
+                    <label for="mau">Mau belajar aja</label>
+                    <input id="mau" name="mau" type="checkbox"><br>
+                    <label for="Mencoba">Mencoba</label>
+                    <input id="Mencoba" name="Mencoba" type="checkbox"><br>
+                    <label for="ikut">Mau Ngikut</label>
+                    <input id="ikut" name="ikut" type="checkbox"><br>
+                    <label for="hal">Mencoba hal baru</label>
+                    <input id="hal" name="hal" type="checkbox"><br>
+                </fieldset>
+            </form> 
+        </section>
+    </main>
+</body>
+
+</html>
