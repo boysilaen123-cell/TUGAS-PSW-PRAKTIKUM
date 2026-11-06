@@ -1,17 +1,25 @@
-/* ===FILE DAN CONSOLE=== */
-console.log("Halo, JavaScript berjalan!")
+/* ===FUNCTION MURNI SEDERHANA=== */
+function hitungTotal(n, harga) {
+ if (!Number.isInteger(n) || n < 1) return null;
+ return n * harga;
+}
+console.log(hitungTotal(2, 10000));
 
-/* ===KONVERSI DATA=== */
-const teks = "2";
-console.log(teks + 1);
-console.log(Number(teks) + 1);
+/* ===KOLEKSI KEGIATAN=== */
+const kegiatan = [
+ { id: 1, judul: "HTML", kuota: 20 },
+ { id: 2, judul: "CSS", kuota: 0 },
+ { id: 3, judul: "JavaScript", kuota: 15 }
+];
+const tersedia = kegiatan.filter(k => k.kuota > 0);
+console.log(tersedia);
+const judulTersedia = tersedia.map(k => k.judul);
+console.log(judulTersedia);
 
-/* ===ATURAN JUMLAH TIKET=== */
-const jumlah = Number("3");
-if (!Number.isInteger(jumlah) || jumlah < 1 || jumlah > 5) {
-    console.log("Jumlah tidak valid");
-} else { console.log(jumlah * 10000); }
+/* ===DESTRUCTURING DAN SCOPE=== */
+const { judul, kuota } = kegiatan[0];
+console.log(judul, kuota);
 
-/* ===LOOP KOLEKSI=== */
-const judul = ["HTML", "CSS", "Audit", "JavaScript"];
-for (const item of judul) console.log(item)
+/* ===MODULE DAN UJI=== */
+import { HitungTotal } from "./utils.js";
+console.log(HitungTotal(2, 10000));
